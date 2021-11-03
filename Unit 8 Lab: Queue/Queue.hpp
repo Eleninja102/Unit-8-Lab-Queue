@@ -82,16 +82,13 @@ void Queue<Type>::add(Type data){
     
     
     if(top == nullptr){
-        bottom = add;
-        //cout << bottom << endl;
         top = add;
-        //cout << top << endl;
-
-        top -> next = nullptr;
+        bottom = add;
+        add -> next = nullptr;
     }else{
         
-        add->next = top;
-        top = add;
+        bottom -> next = add;
+        bottom = add;
     
     }
 }
@@ -102,6 +99,7 @@ void Queue<Type>::remove(){
         Node<Type> *temp = top;
         top = top->next;
         delete temp;
+
     
     }
     
