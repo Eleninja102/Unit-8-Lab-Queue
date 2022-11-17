@@ -12,7 +12,7 @@
 using namespace std;
 template<class Type>
 struct Node{
-    string data;
+    Type data;
     Node *next;
 };
 template<class Type>
